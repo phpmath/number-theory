@@ -1,0 +1,61 @@
+{
+    "name": "phpmath/number-theory",
+    "type": "library",
+    "description": "A PHP library with number theory algorithms for arbitrary-size integers.",
+    "keywords": [
+        "phpmath",
+        "number-theory",
+        "prime",
+        "gcd",
+        "modular-arithmetic",
+        "math",
+        "php8"
+    ],
+    "homepage": "https://github.com/phpmath/number-theory",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Walter Tamboer",
+            "homepage": "https://waltertamboer.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "ext-gmp": "*",
+        "phpmath/biginteger": "^3.0"
+    },
+    "require-dev": {
+        "phpmath/coding-standard": "^2.0",
+        "phpstan/phpstan": "^2.3",
+        "phpunit/phpunit": "^13.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPMath\\NumberTheory\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHPMath\\NumberTheory\\Tests\\": "tests/unit"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test-coverage": [
+            "@putenv XDEBUG_MODE=coverage",
+            "phpunit --coverage-html build/phpunit-coverage/"
+        ],
+        "check-style": "vendor/bin/phpcs",
+        "fix-style": "vendor/bin/phpcbf",
+        "analyse": "vendor/bin/phpstan analyse --no-progress"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "process-timeout": 5000,
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
