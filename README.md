@@ -12,7 +12,7 @@ All classes are either static function holders (`final class`, no instances) or 
 
 ## Documentation
 
-The full documentation is at https://phpmath.github.io/number-theory/. Every release is described on the [releases page](https://github.com/phpmath/number-theory/releases).
+The full documentation is at https://phpmath.github.io/number-theory/. Every change is listed in the [changelog](CHANGELOG.md) and every release on the [releases page](https://github.com/phpmath/number-theory/releases).
 
 ## Install
 
